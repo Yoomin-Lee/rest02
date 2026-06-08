@@ -1,0 +1,112 @@
+.about {
+  background: var(--bg-2);
+  position: relative;
+}
+
+.about::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-blue), transparent);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.about-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--blue-light);
+  margin-bottom: 16px;
+}
+
+.about-text {
+  font-size: 0.96rem;
+  color: var(--text-300);
+  line-height: 1.95;
+  margin-bottom: 18px;
+}
+
+.about-founded {
+  margin-top: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 22px 24px;
+  background: rgba(37,99,235,0.06);
+  border: 1px solid var(--border-blue);
+  border-radius: 12px;
+}
+
+.founded-item { display: flex; flex-direction: column; gap: 4px; }
+
+.founded-label {
+  font-size: 0.72rem;
+  color: var(--blue-light);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.founded-value {
+  font-size: 0.95rem;
+  color: var(--text-100);
+  font-weight: 600;
+}
+
+.about-right {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.value-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 24px 26px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.value-card:hover {
+  transform: translateX(6px);
+  border-color: var(--border-blue);
+  box-shadow: 0 4px 24px rgba(37,99,235,0.1);
+}
+
+/* 개별 색 제거 — 통일된 다크 테마로 */
+.value-card--blue,
+.value-card--green,
+.value-card--red {
+  background: var(--bg-card);
+  border-color: var(--border);
+}
+
+.value-icon { font-size: 1.6rem; flex-shrink: 0; margin-top: 2px; }
+
+.value-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-100);
+  margin-bottom: 5px;
+}
+
+.value-desc {
+  font-size: 0.87rem;
+  color: var(--text-300);
+  line-height: 1.75;
+}
+
+@media (max-width: 900px) {
+  .about-grid { grid-template-columns: 1fr; gap: 48px; }
+}

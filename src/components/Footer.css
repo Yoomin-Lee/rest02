@@ -1,0 +1,87 @@
+.footer {
+  background: var(--bg-base);
+  border-top: 1px solid var(--border);
+  padding: 60px 0 28px;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 80px;
+  padding-bottom: 44px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 28px;
+}
+
+.footer-brand .logo {
+  font-size: 1.35rem;
+  font-weight: 800;
+  display: inline-block;
+  margin-bottom: 14px;
+}
+
+.footer-tagline {
+  font-size: 0.85rem;
+  color: var(--text-300);
+  line-height: 1.85;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.footer-col { display: flex; flex-direction: column; gap: 10px; }
+
+.footer-col h5 {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--blue-light);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.footer-col a,
+.footer-col span {
+  font-size: 0.86rem;
+  color: var(--text-300);
+  transition: color 0.2s;
+  cursor: pointer;
+}
+
+.footer-col a:hover { color: var(--text-100); }
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-copy {
+  font-size: 0.78rem;
+  color: var(--text-400);
+}
+
+.scroll-top {
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-300);
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s, transform 0.2s;
+}
+
+.scroll-top:hover {
+  border-color: var(--blue-light);
+  color: var(--blue-light);
+  transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+  .footer-top { grid-template-columns: 1fr; gap: 36px; }
+  .footer-links { grid-template-columns: 1fr 1fr; gap: 22px; }
+}

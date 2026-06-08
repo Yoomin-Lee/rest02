@@ -1,0 +1,105 @@
+:root {
+  /* ── Backgrounds (깊고 차분한 다크 네이비) */
+  --bg-base:    #070c14;   /* 최하층 배경 */
+  --bg-1:       #0a1020;   /* 섹션 기본 */
+  --bg-2:       #0e1628;   /* 섹션 교차 */
+  --bg-card:    #111d30;   /* 카드 배경 */
+  --bg-card-2:  #162236;   /* 호버 카드 */
+
+  /* ── Primary — 신뢰감 있는 로열블루 */
+  --blue:       #2563eb;
+  --blue-light: #3b82f6;
+  --blue-dim:   #1d4ed8;
+  --blue-glow:  rgba(37, 99, 235, 0.25);
+
+  /* ── Accent 1 — 테크/혁신 느낌의 사이언 */
+  --cyan:       #0891b2;
+  --cyan-light: #06b6d4;
+
+  /* ── Accent 2 — 신뢰/강조용 앰버 (포인트) */
+  --amber:      #d97706;
+  --amber-light:#f59e0b;
+
+  /* ── Text */
+  --text-100: #f0f4ff;    /* 헤딩 */
+  --text-200: #c8d3e8;    /* 본문 */
+  --text-300: #7e8fa8;    /* 보조 */
+  --text-400: #3d4f65;    /* 비활성 */
+
+  /* ── Border */
+  --border:     rgba(255,255,255,0.07);
+  --border-blue:rgba(37, 99, 235, 0.3);
+
+  /* ── Legacy aliases (기존 컴포넌트 호환) */
+  --dark-blue:        var(--bg-1);
+  --dark-blue-2:      var(--bg-2);
+  --royal-blue:       var(--blue);
+  --royal-blue-light: var(--blue-light);
+  --royal-blue-hover: var(--blue-dim);
+  --dark-green:       var(--cyan);
+  --dark-green-light: var(--cyan-light);
+  --dark-red:         var(--amber);
+  --dark-red-light:   var(--amber-light);
+  --white:            var(--text-100);
+  --mid-gray:         var(--text-300);
+  --dark-gray:        var(--text-400);
+  --text-main:        var(--text-200);
+  --text-sub:         var(--text-300);
+
+  /* ── Layout */
+  --section-padding: 110px 0;
+  --container-max:   1200px;
+  --font-main: 'Pretendard', 'Noto Sans KR', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-base);
+  color: var(--text-200);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+section { padding: var(--section-padding); }
+
+h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; }
+
+a { text-decoration: none; color: inherit; }
+
+img { max-width: 100%; }
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+  color: var(--text-100);
+  letter-spacing: -0.02em;
+}
+
+.section-title span {
+  background: linear-gradient(135deg, var(--blue-light), var(--cyan-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  color: var(--text-300);
+  margin-bottom: 60px;
+}
+
+/* ── Scrollbar */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--bg-base); }
+::-webkit-scrollbar-thumb { background: var(--blue-dim); border-radius: 3px; }

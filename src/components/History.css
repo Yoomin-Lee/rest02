@@ -1,0 +1,138 @@
+.history {
+  background: var(--bg-2);
+  position: relative;
+}
+
+.history::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-blue), transparent);
+}
+
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 0; bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--border-blue) 5%,
+    var(--border-blue) 95%,
+    transparent
+  );
+}
+
+.timeline-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 44px;
+  position: relative;
+}
+
+.timeline-item.left  { justify-content: flex-end;   padding-right: calc(50% + 36px); }
+.timeline-item.right { justify-content: flex-start;  padding-left:  calc(50% + 36px); }
+
+.timeline-content {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 22px 26px;
+  max-width: 360px;
+  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.timeline-content:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-blue);
+  box-shadow: 0 10px 36px rgba(37,99,235,0.1);
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  background: var(--blue);
+  border: 3px solid var(--bg-2);
+  box-shadow: 0 0 0 4px rgba(37,99,235,0.2);
+  z-index: 1;
+}
+
+.timeline-badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 50px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  margin-bottom: 12px;
+}
+
+.badge--blue {
+  background: rgba(37,99,235,0.15);
+  color: var(--blue-light);
+  border: 1px solid rgba(37,99,235,0.25);
+}
+.badge--green {
+  background: rgba(8,145,178,0.12);
+  color: var(--cyan-light);
+  border: 1px solid rgba(8,145,178,0.25);
+}
+.badge--red {
+  background: rgba(217,119,6,0.12);
+  color: var(--amber-light);
+  border: 1px solid rgba(217,119,6,0.25);
+}
+
+.timeline-date {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.timeline-year {
+  font-size: 1.55rem;
+  font-weight: 900;
+  color: var(--text-100);
+  line-height: 1;
+}
+
+.timeline-month {
+  font-size: 0.82rem;
+  color: var(--text-300);
+  font-weight: 500;
+}
+
+.timeline-title {
+  font-size: 0.97rem;
+  font-weight: 700;
+  color: var(--text-100);
+  margin-bottom: 7px;
+}
+
+.timeline-desc {
+  font-size: 0.84rem;
+  color: var(--text-300);
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .timeline-line { left: 18px; }
+  .timeline-item.left,
+  .timeline-item.right { justify-content: flex-start; padding-left: 48px; padding-right: 0; }
+  .timeline-dot { left: 18px; }
+  .timeline-content { max-width: 100%; }
+}

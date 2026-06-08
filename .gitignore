@@ -1,0 +1,10 @@
+node_modules
+dist
+.env
+.env.local
+
+# 스크린샷 (개발 중 테스트용)
+*.png
+screenshot*.mjs
+screenshot_live.mjs
+screenshot_new.mjs
