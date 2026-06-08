@@ -2,19 +2,19 @@ import './About.css'
 
 const values = [
   {
-    icon: '🛡️',
+    icon: 'fa-solid fa-shield-halved',
     title: '신뢰',
     desc: '20년간 고객과 함께 쌓아온 신뢰를 가장 중요한 자산으로 여깁니다.',
     color: 'blue',
   },
   {
-    icon: '⚡',
+    icon: 'fa-solid fa-microchip',
     title: '혁신',
     desc: '변화하는 기술 트렌드를 선도하며 최적의 솔루션을 제공합니다.',
     color: 'green',
   },
   {
-    icon: '🤝',
+    icon: 'fa-solid fa-handshake',
     title: '파트너십',
     desc: '단순 납품이 아닌 고객과 함께 성장하는 장기적 파트너를 지향합니다.',
     color: 'red',
@@ -58,7 +58,9 @@ export default function About() {
           <div className="about-right">
             {values.map(v => (
               <div key={v.title} className={`value-card value-card--${v.color}`}>
-                <span className="value-icon">{v.icon}</span>
+                <span className="value-icon">
+                  <i className={v.icon} />
+                </span>
                 <div>
                   <h4 className="value-title">{v.title}</h4>
                   <p className="value-desc">{v.desc}</p>

@@ -29,21 +29,21 @@ export default function Contact() {
 
             <div className="contact-info">
               <div className="info-item">
-                <span className="info-icon">📞</span>
+                <span className="info-icon"><i className="fa-solid fa-phone" /></span>
                 <div>
                   <span className="info-label">전화 문의</span>
                   <span className="info-value">02-0000-0000</span>
                 </div>
               </div>
               <div className="info-item">
-                <span className="info-icon">✉️</span>
+                <span className="info-icon"><i className="fa-regular fa-envelope" /></span>
                 <div>
                   <span className="info-label">이메일</span>
                   <span className="info-value">info@devco.co.kr</span>
                 </div>
               </div>
               <div className="info-item">
-                <span className="info-icon">🕐</span>
+                <span className="info-icon"><i className="fa-regular fa-clock" /></span>
                 <div>
                   <span className="info-label">운영시간</span>
                   <span className="info-value">평일 09:00 – 18:00</span>
@@ -55,7 +55,7 @@ export default function Contact() {
           <div className="contact-right">
             {sent ? (
               <div className="form-success">
-                <span className="success-icon">✅</span>
+                <i className="fa-solid fa-circle-check success-icon" />
                 <h3>문의가 접수되었습니다!</h3>
                 <p>빠른 시일 내에 연락드리겠습니다.</p>
                 <button onClick={() => setSent(false)} className="btn-outline-sm">
@@ -106,7 +106,7 @@ export default function Contact() {
                   />
                 </div>
                 <button type="submit" className="btn-submit">
-                  문의 보내기 →
+                  문의 보내기 <i className="fa-solid fa-paper-plane" />
                 </button>
               </form>
             )}
