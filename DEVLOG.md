@@ -86,6 +86,52 @@ src/
 
 ---
 
+### 5차 — 파비콘 및 페이지 타이틀 적용
+
+- SVG 파비콘 제작 (`public/favicon.svg`)
+  - 다크 네이비 배경 + 블루→사이언 그라데이션 `[ D ]` 브래킷 스타일
+  - 사이트 로고와 동일한 디자인 언어로 통일
+- 페이지 타이틀 변경: `IT 개발 회사` → `DevCo | IT 개발 전문 회사`
+
+---
+
+### 6차 — 네비게이션 가독성 개선
+
+**문제:** 헤더 메뉴(홈/회사소개/서비스/연혁/문의하기) 글씨가 어두워 가독성 저하
+
+| 속성 | 변경 전 | 변경 후 |
+|---|---|---|
+| 색상 | `--text-300` (`#7e8fa8`) | `--text-200` (`#c8d3e8`) |
+| 굵기 | `font-weight: 500` | `font-weight: 600` |
+| 크기 | `0.9rem` | `0.92rem` |
+
+---
+
+### 7차 — 이모지 → Font Awesome 아이콘 전환
+
+**요구사항:** 시스템 이모지 제거, 통일된 아이콘 체계로 감성적인 UI 구성
+
+- Font Awesome 6 Free CDN 적용 (`index.html`)
+- 전체 이모지를 FA 아이콘으로 교체
+
+| 위치 | 기존 | 변경 후 |
+|---|---|---|
+| About — 신뢰 | 🛡️ | `fa-shield-halved` |
+| About — 혁신 | ⚡ | `fa-microchip` |
+| About — 파트너십 | 🤝 | `fa-handshake` |
+| Services — 컴퓨터 판매 | 🖥️ | `fa-server` |
+| Services — SW개발 | ⚙️ | `fa-code` |
+| Services — 웹개발 | 🌐 | `fa-globe` |
+| Contact — 전화 | 📞 | `fa-phone` |
+| Contact — 이메일 | ✉️ | `fa-regular fa-envelope` |
+| Contact — 운영시간 | 🕐 | `fa-regular fa-clock` |
+| Contact — 문의 성공 | ✅ | `fa-circle-check` |
+
+- 아이콘 박스 스타일: 색상 계열별 반투명 배경 + 테두리 + 라운드 처리
+- 문의 버튼: `fa-paper-plane`, 서비스 링크: `fa-arrow-right` 추가
+
+---
+
 ## 섹션별 기능 요약
 
 ### Header
